@@ -5,7 +5,6 @@ public class CalculatorTest {
 
         Calculator calc = new Calculator();
         calc.getUserInput();
-        System.out.println(calc.printCondition());
-
+        System.out.println(calc.checkAndGetInfo());
     }
 }

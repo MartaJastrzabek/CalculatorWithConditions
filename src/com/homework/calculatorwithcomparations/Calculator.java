@@ -15,54 +15,18 @@ public class Calculator {
         in.close();
     }
 
-    public int check(){
+    public String checkAndGetInfo(){
         if(num1 > num2){
-            return 1;
+            return num1 + " is bigger than " + num2 + '\n'
+                    + "Number 1 and number 2 sum is " + (num1 + num2);
         }else if(num1 < num2){
-            return -1;
+            return num1 + " is smaller than " + num2 + '\n'
+                    + "Result of multiplying is: " + (num1*num2);
         }else {
-            return 0;
+            return num1 + " is equal to " + num2 + '\n'
+                    + num1 + " to second power is: " + (num1*num1);
+
         }
     }
 
-    public int sum(){
-        return num1 + num2;
-    }
-
-    public String sumInfo(){
-        return num1 + " is bigger than " + num2 + '\n'
-                + "Number 1 and number 2 sum is " + sum();
-    }
-
-    public int multiply(){
-        return num1*num2;
-    }
-
-    public String multiplyInfo(){
-        return num1 + " is smaller than " + num2 + '\n'
-                + "Result of multiplying is: " + multiply();
-    }
-
-    public int power(){
-        return num1*num1;
-    }
-
-    public String powerInfo(){
-        return num1 + " is equal to " + num2 + '\n'
-                + num1 + " to second power is: " + power();
-    }
-
-    public String printCondition(){
-        int check = check();
-        switch (check){
-            case 1:
-                return sumInfo();
-            case -1:
-                return multiplyInfo();
-            case 0:
-                return powerInfo();
-            default:
-                return "Condition error!";
-        }
-    }
 }
